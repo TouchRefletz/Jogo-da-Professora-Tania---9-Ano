@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="icon" href="IMAGEM" alt="imagem do topo da página" type="image/png">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+    </head>
+    <title>Jogo da Professora Tânia</title>
+    <header>
+        <nav>
+            <p>Jogo da Professora Tânia</p>
+            <ul>
+                <li>ITEM DA LISTA</li>
+                <li>ITEM DA LISTA</li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+        <div class="titulo">
+        <p>Jogo da Professora Tânia</p>
+        </div>
+        <div class="botoes">
+            <button id="jogar" class="botao" onmouseover="playSound()" onmouseout="stopSound()">Jogar</button>
+            <button id="como-jogar" class="botao" onmouseover="playSound()" onmouseout="stopSound()">Como Jogar</button>
+            <button id="config" class="botao" onmouseover="playSound()" onmouseout="stopSound()">Configurações</button>   
+        </div>
+        <audio id="EfeitoSonoroTecnológico">
+            <source src="https://drive.google.com/uc?export=download&id=1qjM4GFnvrINFpibJhWEwbPuZI_p-DxWg" type="audio/mpeg">
+          </audio>
+          <script>
+            var audio = document.getElementById("EfeitoSonoroTecnológico");
+            function playSound() {
+            audio.play();
+            }
+            function stopSound() {
+            audio.pause();
+            audio.currentTime = 0;
+            }
+            const menu = document.createElement('div');
+            menu.classList.add('config-menu');
+            menu.innerHTML = '<p>Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p>';
+            menu.style.position = "absolute";
+            menu.style.top = "50%";
+            menu.style.left = "0";
+            menu.style.right = "0";
+            menu.style.bottom = "0";
+            menu.style.borderRadius = "75px";
+            menu.style.width = "500px";
+            menu.style.height = "600px";
+            menu.style.backgroundColor = "rgba(11, 0, 61, 1)";
+            menu.style.display = "flex";
+            menu.style.flexDirection = "column";
+            menu.style.justifyContent = "center";
+            menu.style.alignItems = "center";
+            menu.style.margin = "auto";
+            menu.style.transform = "translateY(-50%)";
+            menu.style.transition = "1s ease";
+            const closeButton = document.createElement('button');
+            closeButton.textContent = 'Fechar';
+            closeButton.classList.add('botaoconfig');
+            closeButton.onmouseover = () => { playSound(); };
+            closeButton.onmouseout = () => { stopSound(); };
+            closeButton.addEventListener('click', () => {
+            menu.remove();
+            });
+            menu.appendChild(closeButton);
+            const menuButton = document.getElementById('config');
+            menuButton.addEventListener('click', () => {
+            document.body.appendChild(menu);
+            });
+            const menuComoJogar = document.createElement('div');
+            menuComoJogar.classList.add('config-menu');
+            menuComoJogar.innerHTML = '<p>Como jogar</p> <p id="textoconfig">Instruções</p> <p id="textoconfig">Objetivos</p> <p id="textoconfig">Controles</p> <p id="textoconfig">Dicas</p>';
+            menuComoJogar.style.position = "absolute";
+            menuComoJogar.style.top = "50%";
+            menuComoJogar.style.left = "0";
+            menuComoJogar.style.right = "0";
+            menuComoJogar.style.bottom = "0";
+            menuComoJogar.style.borderRadius = "75px";
+            menuComoJogar.style.width = "500px";
+            menuComoJogar.style.height = "600px";
+            menuComoJogar.style.backgroundColor = "rgb(0, 95, 150)";
+            menuComoJogar.style.display = "flex";
+            menuComoJogar.style.flexDirection = "column";
+            menuComoJogar.style.justifyContent = "center";
+            menuComoJogar.style.alignItems = "center";
+            menuComoJogar.style.margin = "auto";
+            menuComoJogar.style.transform = "translateY(-50%)";
+            menuComoJogar.style.transition = "1s ease";
+            const closeButtonComoJogar = document.createElement('button');
+            closeButtonComoJogar.textContent = 'Fechar';
+            closeButtonComoJogar.classList.add('botaocomojogar');
+            closeButtonComoJogar.onmouseover = () => { playSound(); };
+            closeButtonComoJogar.onmouseout = () => { stopSound(); };
+            closeButtonComoJogar.addEventListener('click', () => {
+                menuComoJogar.remove();
+            });
+            menuComoJogar.appendChild(closeButtonComoJogar);
+            const menuButtonComoJogar = document.getElementById('como-jogar');
+            menuButtonComoJogar.addEventListener('click', () => {
+                document.body.appendChild(menuComoJogar);
+            });
+            </script>
+    </body>
+    <footer>
+    </footer>
+</html>
