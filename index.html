@@ -11,16 +11,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
     </head>
     <title>Jogo da Professora Tânia</title>
-    <header>
-        <nav>
-            <p>Jogo da Professora Tânia</p>
-            <ul>
-                <li>ITEM DA LISTA</li>
-                <li>ITEM DA LISTA</li>
-            </ul>
-        </nav>
-    </header>
     <body>
+        <div id="elementos-a-serem-substituidos">
         <div class="titulo">
         <p>Jogo da Professora Tânia</p>
         </div>
@@ -32,7 +24,246 @@
         <audio id="EfeitoSonoroTecnológico">
             <source src="https://drive.google.com/uc?export=download&id=1qjM4GFnvrINFpibJhWEwbPuZI_p-DxWg" type="audio/mpeg">
           </audio>
-          <script>
+        
+             <div id="textopesquisa">
+                <p class="titulopesquisa">Sabe alguma resposta?</p>
+                    <p class="subtitulopesquisa">Coloque uma resposta abaixo para voltar ao nível que estava</p>
+                    </div>
+            <form action="" class="search-bar">
+                <input id="pesquisa" type="search" name="search" pattern=".*\S.*" required>
+                <button class="search-btn" type="submit">
+                    <span>Pesquisar</span>
+                </button>
+            </form>
+            <div id="botaopesquisar">
+            <button class="botaopesquisa" onclick="pesquisar()" onmouseover="playSound()" onmouseout="stopSound()">Pesquisar</button>   
+        </div>
+    </div>
+        </div>
+     </div>
+        <div id="elementos-substitutos" style="display:none;">
+            <div class="titulo">
+                <p>Nível 1</p>
+                </div>
+                <div class="subtitulo">
+                    <p>.--. .-. --- ..-. .. ... ... --- . ...</p>
+                    </div>
+                    <div class="resposta">
+                    <label for="resposta" class="textoresposta">Digite a Resposta:</label>
+                    <div class="certoeerrado">
+                        <img class="certoresposta" src="https://lh3.googleusercontent.com/u/2/drive-viewer/AFGJ81rLztpNL1xTbYtr7MjWFOJWTvtXH_Gc7ept3W1yt8buRf0h18ZS_O9t-nTEV8SYWkAH9D9LMpbEcUk-HdCJj_QGK33Uug=w917-h958"></img>
+                        <img class="erradoresposta" src="https://lh3.google.com/u/2/d/1zj2vl6fHs_8OrSIfbJUgfpdwI838m42A=w917-h942-iv1"></img>
+                        </div>
+                    <input type="text" id="resposta">
+                     <div id="botoesresposta">
+                    <button onclick="verificar()" onmouseover="playSound()" class="botaoresposta">Responder</button>
+                    <button onmouseover="playSound()" class="botaodica">Dica</button>
+                    </div>
+                    <button onmouseover="playSound()" class="botaoproximonivel disabled">Ir para próximo nível</button>
+                </div>     
+        </div>
+        <div id="elementos-substitutos2" style="display:none;">
+            <div class="titulo">
+                <p>Nível 2</p>
+                </div>
+                <div class="subtitulo">
+                    <p>.--. .-. --- ..-. .. ... ... --- . ...</p>
+                    </div>
+                    <div class="resposta2">
+                    <label for="resposta" class="textoresposta">Digite a Resposta:</label>
+                    <div class="certoeerrado">
+                        <img class="certoresposta2" src="https://lh3.googleusercontent.com/u/2/drive-viewer/AFGJ81rLztpNL1xTbYtr7MjWFOJWTvtXH_Gc7ept3W1yt8buRf0h18ZS_O9t-nTEV8SYWkAH9D9LMpbEcUk-HdCJj_QGK33Uug=w917-h958"></img>
+                        <img class="erradoresposta2" src="https://lh3.google.com/u/2/d/1zj2vl6fHs_8OrSIfbJUgfpdwI838m42A=w917-h942-iv1"></img>
+                        </div>
+                    <input type="text" id="resposta2">
+                    <div id="botoesresposta">
+                    <button onclick="verificar2()" onmouseover="playSound()" class="botaoresposta2">Responder</button>
+                    <button onmouseover="playSound()" class="botaodica2">Dica</button>
+                    </div>
+                    <button onmouseover="playSound()" class="botaoproximonivel2 disabled">Ir para próximo nível</button>
+                    <img class="certoresposta2" src="https://lh3.googleusercontent.com/u/2/drive-viewer/AFGJ81rLztpNL1xTbYtr7MjWFOJWTvtXH_Gc7ept3W1yt8buRf0h18ZS_O9t-nTEV8SYWkAH9D9LMpbEcUk-HdCJj_QGK33Uug=w917-h958"></img>
+                    <img class="erradoresposta2" src="https://lh3.google.com/u/2/d/1zj2vl6fHs_8OrSIfbJUgfpdwI838m42A=w917-h942-iv1"></img>
+                </div>
+            </div>
+                <div id="elementos-substitutos3" style="display:none;">
+                    <div class="titulo">
+                        <p>Nível 3</p>
+                        </div>
+                        <div class="subtitulo">
+                            <p>.--. .-. --- ..-. .. ... ... --- . ...</p>
+                            </div>
+                            <div class="resposta3">
+                            <label for="resposta" class="textoresposta">Digite a Resposta:</label>
+                            <div class="certoeerrado">
+                                <img class="certoresposta3" src="https://lh3.googleusercontent.com/u/2/drive-viewer/AFGJ81rLztpNL1xTbYtr7MjWFOJWTvtXH_Gc7ept3W1yt8buRf0h18ZS_O9t-nTEV8SYWkAH9D9LMpbEcUk-HdCJj_QGK33Uug=w917-h958"></img>
+                                <img class="erradoresposta3" src="https://lh3.google.com/u/2/d/1zj2vl6fHs_8OrSIfbJUgfpdwI838m42A=w917-h942-iv1"></img>
+                                </div><input type="text" id="resposta3">
+                            <div id="botoesresposta">
+                            <button onclick="verificar3()" onmouseover="playSound()" class="botaoresposta3">Responder</button>
+                            <button onmouseover="playSound()" class="botaodica3">Dica</button>
+                            </div>
+                            <button onmouseover="playSound()" class="botaoproximonivel3 disabled">Ir para próximo nível</button>
+                        </div>
+                    </div>
+                    <div id="elementos-substitutos4" style="display:none;">
+                        <div class="titulo">
+                            <p>Nível 4</p>
+                            </div>
+                            <div class="subtitulo">
+                                <p>.--. .-. --- ..-. .. ... ... --- . ...</p>
+                                </div>
+                                <div class="resposta4">
+                                <label for="resposta" class="textoresposta">Digite a Resposta:</label>
+                                <div class="certoeerrado">
+                                    <img class="certoresposta4" src="https://lh3.googleusercontent.com/u/2/drive-viewer/AFGJ81rLztpNL1xTbYtr7MjWFOJWTvtXH_Gc7ept3W1yt8buRf0h18ZS_O9t-nTEV8SYWkAH9D9LMpbEcUk-HdCJj_QGK33Uug=w917-h958"></img>
+                                    <img class="erradoresposta4" src="https://lh3.google.com/u/2/d/1zj2vl6fHs_8OrSIfbJUgfpdwI838m42A=w917-h942-iv1"></img>
+                                    </div><input type="text" id="resposta4">
+                                <div id="botoesresposta">
+                                <button onclick="verificar4()" onmouseover="playSound()" class="botaoresposta4">Responder</button>
+                                <button onmouseover="playSound()" class="botaodica4">Dica</button>
+                                </div>
+                                <button onmouseover="playSound()" class="botaoproximonivel4 disabled">Ir para próximo nível</button>
+                                
+                            </div>
+                        </div>
+                        <div id="elementos-substitutos5" style="display:none;">
+                            <div class="titulo">
+                                <p>Nível 5</p>
+                                </div>
+                                <div class="subtitulo">
+                                    <p>.--. .-. --- ..-. .. ... ... --- . ...</p>
+                                    </div>
+                                    <div class="resposta5">
+                                    <label for="resposta" class="textoresposta">Digite a Resposta:</label>
+                                    <div class="certoeerrado">
+                                        <img class="certoresposta5" src="https://lh3.googleusercontent.com/u/2/drive-viewer/AFGJ81rLztpNL1xTbYtr7MjWFOJWTvtXH_Gc7ept3W1yt8buRf0h18ZS_O9t-nTEV8SYWkAH9D9LMpbEcUk-HdCJj_QGK33Uug=w917-h958"></img>
+                                        <img class="erradoresposta5" src="https://lh3.google.com/u/2/d/1zj2vl6fHs_8OrSIfbJUgfpdwI838m42A=w917-h942-iv1"></img>
+                                        </div><input type="text" id="resposta5">
+                                    <div id="botoesresposta">
+                                    <button onclick="verificar5()" onmouseover="playSound()" class="botaoresposta5">Responder</button>
+                                    <button onmouseover="playSound()" class="botaodica5">Dica</button>
+                                    </div>
+                                    <button onmouseover="playSound()" class="botaoproximonivel5 disabled">Ir para próximo nível</button>
+                                  
+                                </div>
+                            </div>
+                            <div id="elementos-substitutos6" style="display:none;">
+                                <div class="titulo">
+                                    <p>Nível 6</p>
+                                    </div>
+                                    <div class="subtitulo">
+                                        <p>.--. .-. --- ..-. .. ... ... --- . ...</p>
+                                        </div>
+                                        <div class="resposta6">
+                                        <label for="resposta" class="textoresposta">Digite a Resposta:</label>
+                                        <div class="certoeerrado">
+                                            <img class="certoresposta6" src="https://lh3.googleusercontent.com/u/2/drive-viewer/AFGJ81rLztpNL1xTbYtr7MjWFOJWTvtXH_Gc7ept3W1yt8buRf0h18ZS_O9t-nTEV8SYWkAH9D9LMpbEcUk-HdCJj_QGK33Uug=w917-h958"></img>
+                                            <img class="erradoresposta6" src="https://lh3.google.com/u/2/d/1zj2vl6fHs_8OrSIfbJUgfpdwI838m42A=w917-h942-iv1"></img>
+                                            </div><input type="text" id="resposta6">
+                                        <div id="botoesresposta">
+                                        <button onclick="verificar6()" onmouseover="playSound()" class="botaoresposta6">Responder</button>
+                                        <button onmouseover="playSound()" class="botaodica6">Dica</button>
+                                        </div>
+                                        <button onmouseover="playSound()" class="botaoproximonivel6 disabled">Ir para próximo nível</button>
+                                        
+                                    </div>
+                                </div>
+                                <div id="elementos-substitutos7" style="display:none;">
+                                    <div class="titulo">
+                                        <p>Nível 7</p>
+                                        </div>
+                                        <div class="subtitulo">
+                                            <p>.--. .-. --- ..-. .. ... ... --- . ...</p>
+                                            </div>
+                                            <div class="resposta7">
+                                            <label for="resposta" class="textoresposta">Digite a Resposta:</label>
+                                            <div class="certoeerrado">
+                                                <img class="certoresposta7" src="https://lh3.googleusercontent.com/u/2/drive-viewer/AFGJ81rLztpNL1xTbYtr7MjWFOJWTvtXH_Gc7ept3W1yt8buRf0h18ZS_O9t-nTEV8SYWkAH9D9LMpbEcUk-HdCJj_QGK33Uug=w917-h958"></img>
+                                                <img class="erradoresposta7" src="https://lh3.google.com/u/2/d/1zj2vl6fHs_8OrSIfbJUgfpdwI838m42A=w917-h942-iv1"></img>
+                                                </div><input type="text" id="resposta7">
+                                            <div id="botoesresposta">
+                                            <button onclick="verificar7()" onmouseover="playSound()" class="botaoresposta7">Responder</button>
+                                            <button onmouseover="playSound()" class="botaodica7">Dica</button>
+                                            </div>
+                                            <button onmouseover="playSound()" class="botaoproximonivel7 disabled">Ir para próximo nível</button>
+                                          
+                                        </div>
+                                    </div>
+                                    <div id="elementos-substitutos8" style="display:none;">
+                                        <div class="titulo">
+                                            <p>Nível 8</p>
+                                            </div>
+                                            <div class="subtitulo">
+                                                <p>.--. .-. --- ..-. .. ... ... --- . ...</p>
+                                                </div>
+                                                <div class="resposta8">
+                                                <label for="resposta" class="textoresposta">Digite a Resposta:</label>
+                                                <div class="certoeerrado">
+                                                    <img class="certoresposta8" src="https://lh3.googleusercontent.com/u/2/drive-viewer/AFGJ81rLztpNL1xTbYtr7MjWFOJWTvtXH_Gc7ept3W1yt8buRf0h18ZS_O9t-nTEV8SYWkAH9D9LMpbEcUk-HdCJj_QGK33Uug=w917-h958"></img>
+                                                    <img class="erradoresposta8" src="https://lh3.google.com/u/2/d/1zj2vl6fHs_8OrSIfbJUgfpdwI838m42A=w917-h942-iv1"></img>
+                                                    </div><input type="text" id="resposta8">
+                                                <div id="botoesresposta">
+                                                <button onclick="verificar8()" onmouseover="playSound()" class="botaoresposta8">Responder</button>
+                                                <button onmouseover="playSound()" class="botaodica8">Dica</button>
+                                                </div>
+                                                <button onmouseover="playSound()" class="botaoproximonivel8 disabled">Ir para próximo nível</button>
+                                                
+                                            </div>
+                                        </div>
+                                        <div id="elementos-substitutos9" style="display:none;">
+                                            <div class="titulo">
+                                                <p>Nível 9</p>
+                                                </div>
+                                                <div class="subtitulo">
+                                                    <p>.--. .-. --- ..-. .. ... ... --- . ...</p>
+                                                    </div>
+                                                    <div class="resposta9">
+                                                    <label for="resposta" class="textoresposta">Digite a Resposta:</label>
+                                                    <div class="certoeerrado">
+                                                        <img class="certoresposta9" src="https://lh3.googleusercontent.com/u/2/drive-viewer/AFGJ81rLztpNL1xTbYtr7MjWFOJWTvtXH_Gc7ept3W1yt8buRf0h18ZS_O9t-nTEV8SYWkAH9D9LMpbEcUk-HdCJj_QGK33Uug=w917-h958"></img>
+                                                        <img class="erradoresposta9" src="https://lh3.google.com/u/2/d/1zj2vl6fHs_8OrSIfbJUgfpdwI838m42A=w917-h942-iv1"></img>
+                                                        </div><input type="text" id="resposta9">
+                                                    <div id="botoesresposta">
+                                                    <button onclick="verificar9()" onmouseover="playSound()" class="botaoresposta9">Responder</button>
+                                                    <button onmouseover="playSound()" class="botaodica9">Dica</button>
+                                                    </div>
+                                                    <button onmouseover="playSound()" class="botaoproximonivel9 disabled">Ir para próximo nível</button>
+                                                  
+                                                </div>
+                                            </div>
+                                            <div id="elementos-substitutos10" style="display:none;">
+                                                <div class="titulo">
+                                                    <p>Nível 10</p>
+                                                    </div>
+                                                    <div class="subtitulo">
+                                                        <p>.--. .-. --- ..-. .. ... ... --- . ...</p>
+                                                        </div>
+                                                        <div class="resposta10">
+                                                        <label for="resposta" class="textoresposta">Digite a Resposta:</label>
+                                                        <div class="certoeerrado">
+                                                            <img class="certoresposta10" src="https://lh3.googleusercontent.com/u/2/drive-viewer/AFGJ81rLztpNL1xTbYtr7MjWFOJWTvtXH_Gc7ept3W1yt8buRf0h18ZS_O9t-nTEV8SYWkAH9D9LMpbEcUk-HdCJj_QGK33Uug=w917-h958"></img>
+                                                            <img class="erradoresposta10" src="https://lh3.google.com/u/2/d/1zj2vl6fHs_8OrSIfbJUgfpdwI838m42A=w917-h942-iv1"></img>
+                                                            </div><input type="text" id="resposta10">
+                                                        <div id="botoesresposta">
+                                                        <button onclick="verificar10()" onmouseover="playSound()" class="botaoresposta10">Responder</button>
+                                                        <button onmouseover="playSound()" class="botaodica10">Dica</button>
+                                                        </div>
+                                                        <button onmouseover="playSound()" class="botaoproximonivel10 disabled">Acabar o Jogo</button>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div id="fim-de-jogo" style="display:none;">
+                                                    <div class="titulo">
+                                                        <p>Fim de Jogo!</p>
+                                                        </div>
+                                                        <div class="subtitulo">
+                                                            <p>Muito Obrigado por Jogar!</p>
+                                                            </div>
+                                                            <div class="resposta11">
+                                                            <button onmouseover="playSound()" class="botaoproximonivel11" style="opacity: 1;">Voltar ao Menu Principal</button>
+                                                        </div>
+                                                    </div>
+        <script>
             var audio = document.getElementById("EfeitoSonoroTecnológico");
             function playSound() {
             audio.play();
@@ -104,6 +335,952 @@
             const menuButtonComoJogar = document.getElementById('como-jogar');
             menuButtonComoJogar.addEventListener('click', () => {
                 document.body.appendChild(menuComoJogar);
+            });
+            document.addEventListener('DOMContentLoaded', function() {
+            const jogarButton = document.querySelector('#jogar');
+            const elementosASeremSubstituidos = document.querySelector('#elementos-a-serem-substituidos');
+            const elementosSubstitutos = document.querySelector('#elementos-substitutos');
+            console.log(elementosSubstitutos);
+            jogarButton.addEventListener('click', function() {
+                elementosASeremSubstituidos.classList.add('fade-out');
+                setTimeout(function() {
+                    elementosASeremSubstituidos.style.display = 'none';
+                    elementosSubstitutos.style.display = 'block';
+                }, 500); // aguarda 500ms para realizar a transição antes de mudar os elementos
+            });
+            });
+            function verificar() {
+    var resposta = document.getElementById("resposta").value;
+    var certoresposta = document.querySelector(".certoresposta");
+    var erradoresposta = document.querySelector(".erradoresposta");
+    var botaoresposta = document.querySelector(".botaoresposta");
+    var botaoproximonivel = document.querySelector(".botaoproximonivel");
+    var botaodica = document.querySelector(".botaodica");
+    var input = document.getElementById("resposta");
+    input.disabled = true;
+    if (resposta.toLowerCase().replace(/^\s+|\s+$/g, '') === "profissoes") {
+        certoresposta.style.opacity= "1";
+        botaoresposta.style.opacity= "0";
+        botaoresposta.disabled = true;
+        botaodica.style.opacity= "0";
+        botaodica.disabled = true;
+        setTimeout(function() {
+            certoresposta.style.opacity= "0";
+            botaoproximonivel.style.opacity= "1";
+            botaoproximonivel.classList.remove('disabled');
+            botaoproximonivel.style.cursor= "pointer";
+        }, 3000); // espera 3 segundos antes de executar o primeiro setTimeout
+    } else {
+        erradoresposta.style.opacity= "1";
+        botaoresposta.style.opacity= "0";
+        botaoresposta.disabled = true;
+        setTimeout(function() {
+            erradoresposta.style.opacity= "0";
+            botaoresposta.disabled = false;
+            botaoresposta.style.opacity= "1";
+            input.disabled = false;
+        }, 5000);
+    }
+}
+function verificar2() {
+    var resposta2 = document.getElementById("resposta2").value;
+    var certoresposta2 = document.querySelector(".certoresposta2");
+    var erradoresposta2 = document.querySelector(".erradoresposta2");
+    var botaoresposta2 = document.querySelector(".botaoresposta2");
+    var botaoproximonivel2 = document.querySelector(".botaoproximonivel2");
+    var botaodica2 = document.querySelector(".botaodica2");
+    var input2 = document.getElementById("resposta2");
+    input2.disabled = true;
+    if (resposta2.toLowerCase().replace(/^\s+|\s+$/g, '') === "carro") {
+        certoresposta2.style.opacity= "1";
+        botaoresposta2.style.opacity= "0";
+        botaoresposta2.disabled = true;
+        botaodica2.style.opacity= "0";
+        botaodica2.disabled = true;
+        setTimeout(function() {
+            certoresposta2.style.opacity= "0";
+            botaoproximonivel2.style.opacity= "1";
+            botaoproximonivel2.classList.remove('disabled');
+            botaoproximonivel2.style.cursor= "pointer";
+        }, 3000); // espera 3 segundos antes de executar o primeiro setTimeout
+    } else {
+        erradoresposta2.style.opacity= "1";
+        botaoresposta2.style.opacity= "0";
+        botaoresposta2.disabled = true;
+        setTimeout(function() {
+            erradoresposta2.style.opacity= "0";
+            botaoresposta2.disabled = false;
+            botaoresposta2.style.opacity= "1";
+            input2.disabled = false;
+        }, 5000);
+    }
+}
+function verificar3() {
+    var resposta2 = document.getElementById("resposta3").value;
+    var certoresposta2 = document.querySelector(".certoresposta3");
+    var erradoresposta2 = document.querySelector(".erradoresposta3");
+    var botaoresposta2 = document.querySelector(".botaoresposta3");
+    var botaoproximonivel2 = document.querySelector(".botaoproximonivel3");
+    var botaodica2 = document.querySelector(".botaodica3");
+    var input2 = document.getElementById("resposta3");
+    input2.disabled = true;
+    if (resposta2.toLowerCase().replace(/^\s+|\s+$/g, '') === "onibus") {
+        certoresposta2.style.opacity= "1";
+        botaoresposta2.style.opacity= "0";
+        botaoresposta2.disabled = true;
+        botaodica2.style.opacity= "0";
+        botaodica2.disabled = true;
+        setTimeout(function() {
+            certoresposta2.style.opacity= "0";
+            botaoproximonivel2.style.opacity= "1";
+            botaoproximonivel2.classList.remove('disabled');
+            botaoproximonivel2.style.cursor= "pointer";
+        }, 3000); // espera 3 segundos antes de executar o primeiro setTimeout
+    } else {
+        erradoresposta2.style.opacity= "1";
+        botaoresposta2.style.opacity= "0";
+        botaoresposta2.disabled = true;
+        setTimeout(function() {
+            erradoresposta2.style.opacity= "0";
+            botaoresposta2.disabled = false;
+            botaoresposta2.style.opacity= "1";
+            input2.disabled = false;
+        }, 5000);
+    }
+}
+function verificar4() {
+    var resposta2 = document.getElementById("resposta4").value;
+    var certoresposta2 = document.querySelector(".certoresposta4");
+    var erradoresposta2 = document.querySelector(".erradoresposta4");
+    var botaoresposta2 = document.querySelector(".botaoresposta4");
+    var botaoproximonivel2 = document.querySelector(".botaoproximonivel4");
+    var botaodica2 = document.querySelector(".botaodica4");
+    var input2 = document.getElementById("resposta4");
+    input2.disabled = true;
+    if (resposta2.toLowerCase().replace(/^\s+|\s+$/g, '') === "aviao") {
+        certoresposta2.style.opacity= "1";
+        botaoresposta2.style.opacity= "0";
+        botaoresposta2.disabled = true;
+        botaodica2.style.opacity= "0";
+        botaodica2.disabled = true;
+        setTimeout(function() {
+            certoresposta2.style.opacity= "0";
+            botaoproximonivel2.style.opacity= "1";
+            botaoproximonivel2.classList.remove('disabled');
+            botaoproximonivel2.style.cursor= "pointer";
+        }, 3000); // espera 3 segundos antes de executar o primeiro setTimeout
+    } else {
+        erradoresposta2.style.opacity= "1";
+        botaoresposta2.style.opacity= "0";
+        botaoresposta2.disabled = true;
+        setTimeout(function() {
+            erradoresposta2.style.opacity= "0";
+            botaoresposta2.disabled = false;
+            botaoresposta2.style.opacity= "1";
+            input2.disabled = false;
+        }, 5000);
+    }
+}
+function verificar5() {
+    var resposta2 = document.getElementById("resposta5").value;
+    var certoresposta2 = document.querySelector(".certoresposta5");
+    var erradoresposta2 = document.querySelector(".erradoresposta5");
+    var botaoresposta2 = document.querySelector(".botaoresposta5");
+    var botaoproximonivel2 = document.querySelector(".botaoproximonivel5");
+    var botaodica2 = document.querySelector(".botaodica5");
+    var input2 = document.getElementById("resposta5");
+    input2.disabled = true;
+    if (resposta2.toLowerCase().replace(/^\s+|\s+$/g, '') === "moto") {
+        certoresposta2.style.opacity= "1";
+        botaoresposta2.style.opacity= "0";
+        botaoresposta2.disabled = true;
+        botaodica2.style.opacity= "0";
+        botaodica2.disabled = true;
+        setTimeout(function() {
+            certoresposta2.style.opacity= "0";
+            botaoproximonivel2.style.opacity= "1";
+            botaoproximonivel2.classList.remove('disabled');
+            botaoproximonivel2.style.cursor= "pointer";
+        }, 3000); // espera 3 segundos antes de executar o primeiro setTimeout
+    } else {
+        erradoresposta2.style.opacity= "1";
+        botaoresposta2.style.opacity= "0";
+        botaoresposta2.disabled = true;
+        setTimeout(function() {
+            erradoresposta2.style.opacity= "0";
+            botaoresposta2.disabled = false;
+            botaoresposta2.style.opacity= "1";
+            input2.disabled = false;
+        }, 5000);
+    }
+}
+function verificar6() {
+    var resposta2 = document.getElementById("resposta6").value;
+    var certoresposta2 = document.querySelector(".certoresposta6");
+    var erradoresposta2 = document.querySelector(".erradoresposta6");
+    var botaoresposta2 = document.querySelector(".botaoresposta6");
+    var botaoproximonivel2 = document.querySelector(".botaoproximonivel6");
+    var botaodica2 = document.querySelector(".botaodica6");
+    var input2 = document.getElementById("resposta6");
+    input2.disabled = true;
+    if (resposta2.toLowerCase().replace(/^\s+|\s+$/g, '') === "bicicleta") {
+        certoresposta2.style.opacity= "1";
+        botaoresposta2.style.opacity= "0";
+        botaoresposta2.disabled = true;
+        botaodica2.style.opacity= "0";
+        botaodica2.disabled = true;
+        setTimeout(function() {
+            certoresposta2.style.opacity= "0";
+            botaoproximonivel2.style.opacity= "1";
+            botaoproximonivel2.classList.remove('disabled');
+            botaoproximonivel2.style.cursor= "pointer";
+        }, 3000); // espera 3 segundos antes de executar o primeiro setTimeout
+    } else {
+        erradoresposta2.style.opacity= "1";
+        botaoresposta2.style.opacity= "0";
+        botaoresposta2.disabled = true;
+        setTimeout(function() {
+            erradoresposta2.style.opacity= "0";
+            botaoresposta2.disabled = false;
+            botaoresposta2.style.opacity= "1";
+            input2.disabled = false;
+        }, 5000);
+    }
+}
+function verificar7() {
+    var resposta2 = document.getElementById("resposta7").value;
+    var certoresposta2 = document.querySelector(".certoresposta7");
+    var erradoresposta2 = document.querySelector(".erradoresposta7");
+    var botaoresposta2 = document.querySelector(".botaoresposta7");
+    var botaoproximonivel2 = document.querySelector(".botaoproximonivel7");
+    var botaodica2 = document.querySelector(".botaodica7");
+    var input2 = document.getElementById("resposta7");
+    input2.disabled = true;
+    if (resposta2.toLowerCase().replace(/^\s+|\s+$/g, '') === "trem") {
+        certoresposta2.style.opacity= "1";
+        botaoresposta2.style.opacity= "0";
+        botaoresposta2.disabled = true;
+        botaodica2.style.opacity= "0";
+        botaodica2.disabled = true;
+        setTimeout(function() {
+            certoresposta2.style.opacity= "0";
+            botaoproximonivel2.style.opacity= "1";
+            botaoproximonivel2.classList.remove('disabled');
+            botaoproximonivel2.style.cursor= "pointer";
+        }, 3000); // espera 3 segundos antes de executar o primeiro setTimeout
+    } else {
+        erradoresposta2.style.opacity= "1";
+        botaoresposta2.style.opacity= "0";
+        botaoresposta2.disabled = true;
+        setTimeout(function() {
+            erradoresposta2.style.opacity= "0";
+            botaoresposta2.disabled = false;
+            botaoresposta2.style.opacity= "1";
+            input2.disabled = false;
+        }, 5000);
+    }
+}
+function verificar8() {
+    var resposta2 = document.getElementById("resposta8").value;
+    var certoresposta2 = document.querySelector(".certoresposta8");
+    var erradoresposta2 = document.querySelector(".erradoresposta8");
+    var botaoresposta2 = document.querySelector(".botaoresposta8");
+    var botaoproximonivel2 = document.querySelector(".botaoproximonivel8");
+    var botaodica2 = document.querySelector(".botaodica8");
+    var input2 = document.getElementById("resposta8");
+    input2.disabled = true;
+    if (resposta2.toLowerCase().replace(/^\s+|\s+$/g, '') === "barco") {
+        certoresposta2.style.opacity= "1";
+        botaoresposta2.style.opacity= "0";
+        botaoresposta2.disabled = true;
+        botaodica2.style.opacity= "0";
+        botaodica2.disabled = true;
+        setTimeout(function() {
+            certoresposta2.style.opacity= "0";
+            botaoproximonivel2.style.opacity= "1";
+            botaoproximonivel2.classList.remove('disabled');
+            botaoproximonivel2.style.cursor= "pointer";
+        }, 3000); // espera 3 segundos antes de executar o primeiro setTimeout
+    } else {
+        erradoresposta2.style.opacity= "1";
+        botaoresposta2.style.opacity= "0";
+        botaoresposta2.disabled = true;
+        setTimeout(function() {
+            erradoresposta2.style.opacity= "0";
+            botaoresposta2.disabled = false;
+            botaoresposta2.style.opacity= "1";
+            input2.disabled = false;
+        }, 5000);
+    }
+}
+function verificar9() {
+    var resposta2 = document.getElementById("resposta9").value;
+    var certoresposta2 = document.querySelector(".certoresposta9");
+    var erradoresposta2 = document.querySelector(".erradoresposta9");
+    var botaoresposta2 = document.querySelector(".botaoresposta9");
+    var botaoproximonivel2 = document.querySelector(".botaoproximonivel9");
+    var botaodica2 = document.querySelector(".botaodica9");
+    var input2 = document.getElementById("resposta9");
+    input2.disabled = true;
+    if (resposta2.toLowerCase().replace(/^\s+|\s+$/g, '') === "navio") {
+        certoresposta2.style.opacity= "1";
+        botaoresposta2.style.opacity= "0";
+        botaoresposta2.disabled = true;
+        botaodica2.style.opacity= "0";
+        botaodica2.disabled = true;
+        setTimeout(function() {
+            certoresposta2.style.opacity= "0";
+            botaoproximonivel2.style.opacity= "1";
+            botaoproximonivel2.classList.remove('disabled');
+            botaoproximonivel2.style.cursor= "pointer";
+        }, 3000); // espera 3 segundos antes de executar o primeiro setTimeout
+    } else {
+        erradoresposta2.style.opacity= "1";
+        botaoresposta2.style.opacity= "0";
+        botaoresposta2.disabled = true;
+        setTimeout(function() {
+            erradoresposta2.style.opacity= "0";
+            botaoresposta2.disabled = false;
+            botaoresposta2.style.opacity= "1";
+            input2.disabled = false;
+        }, 5000);
+    }
+}
+function verificar10() {
+    var resposta2 = document.getElementById("resposta10").value;
+    var certoresposta2 = document.querySelector(".certoresposta10");
+    var erradoresposta2 = document.querySelector(".erradoresposta10");
+    var botaoresposta2 = document.querySelector(".botaoresposta10");
+    var botaoproximonivel2 = document.querySelector(".botaoproximonivel10");
+    var botaodica2 = document.querySelector(".botaodica10");
+    var input2 = document.getElementById("resposta10");
+    input2.disabled = true;
+    if (resposta2.toLowerCase().replace(/^\s+|\s+$/g, '') === "fim") {
+        certoresposta2.style.opacity= "1";
+        botaoresposta2.style.opacity= "0";
+        botaoresposta2.disabled = true;
+        botaodica2.style.opacity= "0";
+        botaodica2.disabled = true;
+        setTimeout(function() {
+            certoresposta2.style.opacity= "0";
+            botaoproximonivel2.style.opacity= "1";
+            botaoproximonivel2.classList.remove('disabled');
+            botaoproximonivel2.style.cursor= "pointer";
+        }, 3000); // espera 3 segundos antes de executar o primeiro setTimeout
+    } else {
+        erradoresposta2.style.opacity= "1";
+        botaoresposta2.style.opacity= "0";
+        botaoresposta2.disabled = true;
+        setTimeout(function() {
+            erradoresposta2.style.opacity= "0";
+            botaoresposta2.disabled = false;
+            botaoresposta2.style.opacity= "1";
+            input2.disabled = false;
+        }, 5000);
+    }
+}
+            const botaoPesquisa = document.querySelector('.botaopesquisa');
+botaoPesquisa.addEventListener('click', function() {
+  var resposta = document.getElementById("pesquisa").value;
+  var elementosASeremSubstituidos = document.querySelector('#elementos-a-serem-substituidos');
+  var elementosSubstitutos1 = document.querySelector('#elementos-substitutos');
+  var elementosSubstitutos2 = document.querySelector('#elementos-substitutos2');
+  var elementosSubstitutos3 = document.querySelector('#elementos-substitutos3');
+  var elementosSubstitutos4 = document.querySelector('#elementos-substitutos4');
+  var elementosSubstitutos5 = document.querySelector('#elementos-substitutos5');
+  var elementosSubstitutos6 = document.querySelector('#elementos-substitutos6');
+  var elementosSubstitutos7 = document.querySelector('#elementos-substitutos7');
+  var elementosSubstitutos8 = document.querySelector('#elementos-substitutos8');
+  var elementosSubstitutos9 = document.querySelector('#elementos-substitutos9');
+  var elementosSubstitutos10 = document.querySelector('#elementos-substitutos10');
+  var fimdejogo = document.querySelector('#fim-de-jogo');
+  if (resposta.toLowerCase().replace(/^\s+|\s+$/g, '') === "profissoes") {
+    elementosASeremSubstituidos.classList.add('fade-out');
+    setTimeout(function() {
+        elementosASeremSubstituidos.style.display = 'none';
+        elementosSubstitutos2.style.display = 'block';
+    }, 500);
+  } else {
+    // outra ação, caso não seja "profissoes"
+  }
+if (resposta.toLowerCase().replace(/^\s+|\s+$/g, '') === "carro") {
+    elementosASeremSubstituidos.classList.add('fade-out');
+    setTimeout(function() {
+        elementosASeremSubstituidos.style.display = 'none';
+        elementosSubstitutos3.style.display = 'block';
+    }, 500);
+  } else {
+    // outra ação, caso não seja "profissoes"
+  }
+  if (resposta.toLowerCase().replace(/^\s+|\s+$/g, '') === "onibus") {
+    elementosASeremSubstituidos.classList.add('fade-out');
+    setTimeout(function() {
+        elementosASeremSubstituidos.style.display = 'none';
+        elementosSubstitutos4.style.display = 'block';
+    }, 500);
+  } else {
+    // outra ação, caso não seja "profissoes"
+  }
+  if (resposta.toLowerCase().replace(/^\s+|\s+$/g, '') === "aviao") {
+    elementosASeremSubstituidos.classList.add('fade-out');
+    setTimeout(function() {
+        elementosASeremSubstituidos.style.display = 'none';
+        elementosSubstitutos5.style.display = 'block';
+    }, 500);
+  } else {
+    // outra ação, caso não seja "profissoes"
+  }
+  if (resposta.toLowerCase().replace(/^\s+|\s+$/g, '') === "moto") {
+    elementosASeremSubstiuidos.classList.add('fade-out');
+    setTimeout(function() {
+        elementosASeremSubstituidos.style.display = 'none';
+        elementosSubstitutos6.style.display = 'block';
+    }, 500);
+  } else {
+    // outra ação, caso não seja "profissoes"
+  }
+  if (resposta.toLowerCase().replace(/^\s+|\s+$/g, '') === "bicicleta") {
+    elementosASeremSubstituidos.classList.add('fade-out');
+    setTimeout(function() {
+        elementosASeremSubstituidos.style.display = 'none';
+        elementosSubstitutos7.style.display = 'block';
+    }, 500);
+  } else {
+    // outra ação, caso não seja "profissoes"
+  }
+  if (resposta.toLowerCase().replace(/^\s+|\s+$/g, '') === "trem") {
+    elementosASeremSubstituidos.classList.add('fade-out');
+    setTimeout(function() {
+        elementosASeremSubstituidos.style.display = 'none';
+        elementosSubstitutos8.style.display = 'block';
+    }, 500);
+  } else {
+    // outra ação, caso não seja "profissoes"
+  }
+  if (resposta.toLowerCase().replace(/^\s+|\s+$/g, '') === "barco") {
+    elementosASeremSubstituidos.classList.add('fade-out');
+    setTimeout(function() {
+        elementosASeremSubstituidos.style.display = 'none';
+        elementosSubstitutos9.style.display = 'block';
+    }, 500);
+  } else {
+    // outra ação, caso não seja "profissoes"
+  }
+  if (resposta.toLowerCase().replace(/^\s+|\s+$/g, '') === "navio") {
+    elementosASeremSubstituidos.classList.add('fade-out');
+    setTimeout(function() {
+        elementosASeremSubstituidos.style.display = 'none';
+        elementosSubstitutos10.style.display = 'block';
+    }, 500);
+  } else {
+    // outra ação, caso não seja "profissoes"
+  }
+  if (resposta.toLowerCase().replace(/^\s+|\s+$/g, '') === "fim") {
+    elementosASeremSubstituidos.classList.add('fade-out');
+    setTimeout(function() {
+        elementosASeremSubstituidos.style.display = 'none';
+        fimdejogo.style.display = 'block';
+    }, 500);
+  } else {
+    // outra ação, caso não seja "profissoes"
+  }
+});
+            const menuDica = document.createElement('div');
+menuDica.classList.add('config-menu');
+menuDica.innerHTML = '<p>Configurações1</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p>';
+menuDica.style.position = "absolute";
+menuDica.style.top = "50%";
+menuDica.style.left = "0";
+menuDica.style.right = "0";
+menuDica.style.bottom = "0";
+menuDica.style.borderRadius = "75px";
+menuDica.style.width = "500px";
+menuDica.style.height = "600px";
+menuDica.style.backgroundColor = "rgba(11, 0, 61, 1)";
+menuDica.style.display = "flex";
+menuDica.style.flexDirection = "column";
+menuDica.style.justifyContent = "center";
+menuDica.style.alignItems = "center";
+menuDica.style.margin = "auto";
+menuDica.style.transform = "translateY(-50%)";
+menuDica.style.transition = "1s ease";
+const fecharBotao = document.createElement('button');
+fecharBotao.textContent = 'Fechar';
+fecharBotao.classList.add('botaodica');
+fecharBotao.onmouseover = () => { playSound(); };
+fecharBotao.onmouseout = () => { stopSound(); };
+fecharBotao.addEventListener('click', () => {
+  menuDica.remove();
+});
+menuDica.appendChild(fecharBotao);
+const menubotaodica = document.querySelector(".botaodica");
+if (menubotaodica) {
+  menubotaodica.addEventListener('click', () => {
+    document.body.appendChild(menuDica);
+  });
+}
+const menuDica2 = document.createElement('div');
+menuDica2.classList.add('config-menu');
+menuDica2.innerHTML = '<p>Configurações2</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p>';
+menuDica2.style.position = "absolute";
+menuDica2.style.top = "50%";
+menuDica2.style.left = "0";
+menuDica2.style.right = "0";
+menuDica2.style.bottom = "0";
+menuDica2.style.borderRadius = "75px";
+menuDica2.style.width = "500px";
+menuDica2.style.height = "600px";
+menuDica2.style.backgroundColor = "rgba(11, 0, 61, 1)";
+menuDica2.style.display = "flex";
+menuDica2.style.flexDirection = "column";
+menuDica2.style.justifyContent = "center";
+menuDica2.style.alignItems = "center";
+menuDica2.style.margin = "auto";
+menuDica2.style.transform = "translateY(-50%)";
+menuDica2.style.transition = "1s ease";
+const fecharBotao2 = document.createElement('button');
+fecharBotao2.textContent = 'Fechar';
+fecharBotao2.classList.add('botaodica');
+fecharBotao2.onmouseover = () => { playSound(); };
+fecharBotao2.onmouseout = () => { stopSound(); };
+fecharBotao2.addEventListener('click', () => {
+  menuDica2.remove();
+});
+menuDica2.appendChild(fecharBotao2);
+const menubotaodica2 = document.querySelector(".botaodica2");
+if (menubotaodica2) {
+  menubotaodica2.addEventListener('click', () => {
+    document.body.appendChild(menuDica2);
+  });
+}
+const menuDica3 = document.createElement('div');
+menuDica3.classList.add('config-menu');
+menuDica3.innerHTML = '<p>Configurações3</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p>';
+menuDica3.style.position = "absolute";
+menuDica3.style.top = "50%";
+menuDica3.style.left = "0";
+menuDica3.style.right = "0";
+menuDica3.style.bottom = "0";
+menuDica3.style.borderRadius = "75px";
+menuDica3.style.width = "500px";
+menuDica3.style.height = "600px";
+menuDica3.style.backgroundColor = "rgba(11, 0, 61, 1)";
+menuDica3.style.display = "flex";
+menuDica3.style.flexDirection = "column";
+menuDica3.style.justifyContent = "center";
+menuDica3.style.alignItems = "center";
+menuDica3.style.margin = "auto";
+menuDica3.style.transform = "translateY(-50%)";
+menuDica3.style.transition = "1s ease";
+const fecharBotao3 = document.createElement('button');
+fecharBotao3.textContent = 'Fechar';
+fecharBotao3.classList.add('botaodica');
+fecharBotao3.onmouseover = () => { playSound(); };
+fecharBotao3.onmouseout = () => { stopSound(); };
+fecharBotao3.addEventListener('click', () => {
+  menuDica3.remove();
+});
+menuDica3.appendChild(fecharBotao3);
+const menubotaodica3 = document.querySelector(".botaodica3");
+if (menubotaodica3) {
+  menubotaodica3.addEventListener('click', () => {
+    document.body.appendChild(menuDica3);
+  });
+}
+const menuDica4 = document.createElement('div');
+menuDica4.classList.add('config-menu');
+menuDica4.innerHTML = '<p>Configurações4</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p>';
+menuDica4.style.position = "absolute";
+menuDica4.style.top = "50%";
+menuDica4.style.left = "0";
+menuDica4.style.right = "0";
+menuDica4.style.bottom = "0";
+menuDica4.style.borderRadius = "75px";
+menuDica4.style.width = "500px";
+menuDica4.style.height = "600px";
+menuDica4.style.backgroundColor = "rgba(11, 0, 61, 1)";
+menuDica4.style.display = "flex";
+menuDica4.style.flexDirection = "column";
+menuDica4.style.justifyContent = "center";
+menuDica4.style.alignItems = "center";
+menuDica4.style.margin = "auto";
+menuDica4.style.transform = "translateY(-50%)";
+menuDica4.style.transition = "1s ease";
+const fecharBotao4 = document.createElement('button');
+fecharBotao4.textContent = 'Fechar';
+fecharBotao4.classList.add('botaodica');
+fecharBotao4.onmouseover = () => { playSound(); };
+fecharBotao4.onmouseout = () => { stopSound(); };
+fecharBotao4.addEventListener('click', () => {
+  menuDica4.remove();
+});
+menuDica4.appendChild(fecharBotao4);
+const menubotaodica4 = document.querySelector(".botaodica4");
+if (menubotaodica4) {
+  menubotaodica4.addEventListener('click', () => {
+    document.body.appendChild(menuDica4);
+  });
+}
+const menuDica5 = document.createElement('div');
+menuDica5.classList.add('config-menu');
+menuDica5.innerHTML = '<p>Configurações5</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p>';
+menuDica5.style.position = "absolute";
+menuDica5.style.top = "50%";
+menuDica5.style.left = "0";
+menuDica5.style.right = "0";
+menuDica5.style.bottom = "0";
+menuDica5.style.borderRadius = "75px";
+menuDica5.style.width = "500px";
+menuDica5.style.height = "600px";
+menuDica5.style.backgroundColor = "rgba(11, 0, 61, 1)";
+menuDica5.style.display = "flex";
+menuDica5.style.flexDirection = "column";
+menuDica5.style.justifyContent = "center";
+menuDica5.style.alignItems = "center";
+menuDica5.style.margin = "auto";
+menuDica5.style.transform = "translateY(-50%)";
+menuDica5.style.transition = "1s ease";
+const fecharBotao5 = document.createElement('button');
+fecharBotao5.textContent = 'Fechar';
+fecharBotao5.classList.add('botaodica');
+fecharBotao5.onmouseover = () => { playSound(); };
+fecharBotao5.onmouseout = () => { stopSound(); };
+fecharBotao5.addEventListener('click', () => {
+  menuDica5.remove();
+});
+menuDica5.appendChild(fecharBotao5);
+const menubotaodica5 = document.querySelector(".botaodica5");
+if (menubotaodica5) {
+  menubotaodica5.addEventListener('click', () => {
+    document.body.appendChild(menuDica5);
+  });
+}
+const menuDica6 = document.createElement('div');
+menuDica6.classList.add('config-menu');
+menuDica6.innerHTML = '<p>Configurações6</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p>';
+menuDica6.style.position = "absolute";
+menuDica6.style.top = "50%";
+menuDica6.style.left = "0";
+menuDica6.style.right = "0";
+menuDica6.style.bottom = "0";
+menuDica6.style.borderRadius = "75px";
+menuDica6.style.width = "500px";
+menuDica6.style.height = "600px";
+menuDica6.style.backgroundColor = "rgba(11, 0, 61, 1)";
+menuDica6.style.display = "flex";
+menuDica6.style.flexDirection = "column";
+menuDica6.style.justifyContent = "center";
+menuDica6.style.alignItems = "center";
+menuDica6.style.margin = "auto";
+menuDica6.style.transform = "translateY(-50%)";
+menuDica6.style.transition = "1s ease";
+const fecharBotao6 = document.createElement('button');
+fecharBotao6.textContent = 'Fechar';
+fecharBotao6.classList.add('botaodica');
+fecharBotao6.onmouseover = () => { playSound(); };
+fecharBotao6.onmouseout = () => { stopSound(); };
+fecharBotao6.addEventListener('click', () => {
+menuDica6.remove();
+});
+menuDica6.appendChild(fecharBotao6);
+const menubotaodica6 = document.querySelector(".botaodica6");
+if (menubotaodica6) {
+menubotaodica6.addEventListener('click', () => {
+document.body.appendChild(menuDica6);
+});
+}
+const menuDica7 = document.createElement('div');
+menuDica7.classList.add('config-menu');
+menuDica7.innerHTML = '<p>Configurações7</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p>';
+menuDica7.style.position = "absolute";
+menuDica7.style.top = "50%";
+menuDica7.style.left = "0";
+menuDica7.style.right = "0";
+menuDica7.style.bottom = "0";
+menuDica7.style.borderRadius = "75px";
+menuDica7.style.width = "500px";
+menuDica7.style.height = "600px";
+menuDica7.style.backgroundColor = "rgba(11, 0, 61, 1)";
+menuDica7.style.display = "flex";
+menuDica7.style.flexDirection = "column";
+menuDica7.style.justifyContent = "center";
+menuDica7.style.alignItems = "center";
+menuDica7.style.margin = "auto";
+menuDica7.style.transform = "translateY(-50%)";
+menuDica7.style.transition = "1s ease";
+const fecharBotao7 = document.createElement('button');
+fecharBotao7.textContent = 'Fechar';
+fecharBotao7.classList.add('botaodica');
+fecharBotao7.onmouseover = () => { playSound(); };
+fecharBotao7.onmouseout = () => { stopSound(); };
+fecharBotao7.addEventListener('click', () => {
+    menuDica7.remove();
+});
+menuDica7.appendChild(fecharBotao7);
+const menubotaodica7 = document.querySelector(".botaodica7");
+if (menubotaodica7) {
+    menubotaodica7.addEventListener('click', () => {
+        document.body.appendChild(menuDica7);
+    });
+} 
+const menuDica8 = document.createElement('div');
+menuDica8.classList.add('config-menu');
+menuDica8.innerHTML = '<p>Configurações8</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p>';
+menuDica8.style.position = "absolute";
+menuDica8.style.top = "50%";
+menuDica8.style.left = "0";
+menuDica8.style.right = "0";
+menuDica8.style.bottom = "0";
+menuDica8.style.borderRadius = "75px";
+menuDica8.style.width = "500px";
+menuDica8.style.height = "600px";
+menuDica8.style.backgroundColor = "rgba(11, 0, 61, 1)";
+menuDica8.style.display = "flex";
+menuDica8.style.flexDirection = "column";
+menuDica8.style.justifyContent = "center";
+menuDica8.style.alignItems = "center";
+menuDica8.style.margin = "auto";
+menuDica8.style.transform = "translateY(-50%)";
+menuDica8.style.transition = "1s ease";
+const fecharBotao8 = document.createElement('button');
+fecharBotao8.textContent = 'Fechar';
+fecharBotao8.classList.add('botaodica');
+fecharBotao8.onmouseover = () => { playSound(); };
+fecharBotao8.onmouseout = () => { stopSound(); };
+fecharBotao8.addEventListener('click', () => {
+    menuDica8.remove();
+});
+menuDica8.appendChild(fecharBotao8);
+const menubotaodica8 = document.querySelector(".botaodica8");
+if (menubotaodica8) {
+    menubotaodica8.addEventListener('click', () => {
+        document.body.appendChild(menuDica8);
+    });
+}
+const menuDica9 = document.createElement('div');
+menuDica9.classList.add('config-menu');
+menuDica9.innerHTML = '<p>Configurações9</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p>';
+menuDica9.style.position = "absolute";
+menuDica9.style.top = "50%";
+menuDica9.style.left = "0";
+menuDica9.style.right = "0";
+menuDica9.style.bottom = "0";
+menuDica9.style.borderRadius = "75px";
+menuDica9.style.width = "500px";
+menuDica9.style.height = "600px";
+menuDica9.style.backgroundColor = "rgba(11, 0, 61, 1)";
+menuDica9.style.display = "flex";
+menuDica9.style.flexDirection = "column";
+menuDica9.style.justifyContent = "center";
+menuDica9.style.alignItems = "center";
+menuDica9.style.margin = "auto";
+menuDica9.style.transform = "translateY(-50%)";
+menuDica9.style.transition = "1s ease";
+const fecharBotao9 = document.createElement('button');
+fecharBotao9.textContent = 'Fechar';
+fecharBotao9.classList.add('botaodica');
+fecharBotao9.onmouseover = () => { playSound(); };
+fecharBotao9.onmouseout = () => { stopSound(); };
+fecharBotao9.addEventListener('click', () => {
+    menuDica9.remove();
+});
+menuDica9.appendChild(fecharBotao9);
+const menubotaodica9 = document.querySelector(".botaodica9");
+if (menubotaodica9) {
+    menubotaodica9.addEventListener('click', () => {
+        document.body.appendChild(menuDica9);
+    });
+}
+const menuDica10 = document.createElement('div');
+menuDica10.classList.add('config-menu');
+menuDica10.innerHTML = '<p>Configurações10</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p> <p id="textoconfig">Configurações</p>';
+menuDica10.style.position = "absolute";
+menuDica10.style.top = "50%";
+menuDica10.style.left = "0";
+menuDica10.style.right = "0";
+menuDica10.style.bottom = "0";
+menuDica10.style.borderRadius = "75px";
+menuDica10.style.width = "500px";
+menuDica10.style.height = "600px";
+menuDica10.style.backgroundColor = "rgba(11, 0, 61, 1)";
+menuDica10.style.display = "flex";
+menuDica10.style.flexDirection = "column";
+menuDica10.style.justifyContent = "center";
+menuDica10.style.alignItems = "center";
+menuDica10.style.margin = "auto";
+menuDica10.style.transform = "translateY(-50%)";
+menuDica10.style.transition = "1s ease";
+const fecharBotao10 = document.createElement('button');
+fecharBotao10.textContent = 'Fechar';
+fecharBotao10.classList.add('botaodica');
+fecharBotao10.onmouseover = () => { playSound(); };
+fecharBotao10.onmouseout = () => { stopSound(); };
+fecharBotao10.addEventListener('click', () => {
+    menuDica10.remove();
+});
+menuDica10.appendChild(fecharBotao10);
+const menubotaodica10 = document.querySelector(".botaodica10");
+if (menubotaodica10) {
+    menubotaodica10.addEventListener('click', () => {
+        document.body.appendChild(menuDica10);
+    });
+}
+document.addEventListener('DOMContentLoaded', function() {
+            const jogarButton = document.querySelector('#jogar');
+            const elementosASeremSubstituidos = document.querySelector('#elementos-a-serem-substituidos');
+            const elementosSubstitutos = document.querySelector('#elementos-substitutos');
+            console.log(elementosSubstitutos);
+            jogarButton.addEventListener('click', function() {
+                elementosASeremSubstituidos.classList.add('fade-out');
+                setTimeout(function() {
+                    elementosASeremSubstituidos.style.display = 'none';
+                    elementosSubstitutos.style.display = 'block';
+                }, 500); // aguarda 500ms para realizar a transição antes de mudar os elementos
+            });
+            });
+            document.addEventListener('DOMContentLoaded', function() {
+            const jogarButton = document.querySelector('.botaoproximonivel');
+            const elementosASeremSubstituidos = document.querySelector('#elementos-substitutos');
+            const elementosSubstitutos = document.querySelector('#elementos-substitutos2');
+            console.log(elementosSubstitutos);
+            jogarButton.addEventListener('click', function() {
+                elementosASeremSubstituidos.classList.add('fade-out');
+                setTimeout(function() {
+                    elementosASeremSubstituidos.style.display = 'none';
+                    elementosSubstitutos.style.display = 'block';
+                }, 500); // aguarda 500ms para realizar a transição antes de mudar os elementos
+            });
+            });
+            document.addEventListener('DOMContentLoaded', function() {
+            const jogarButton2 = document.querySelector('.botaoproximonivel2');
+            const elementosASeremSubstituidos2 = document.querySelector('#elementos-substitutos2');
+            const elementosSubstitutos2 = document.getElementById("elementos-substitutos3");
+            console.log(elementosSubstitutos2);
+            jogarButton2.addEventListener('click', function() {
+                elementosASeremSubstituidos2.classList.add('fade-out');
+                setTimeout(function() {
+                    elementosASeremSubstituidos2.style.display = 'none';
+                    elementosSubstitutos2.style.display = 'block';
+                }, 500); // aguarda 500ms para realizar a transição antes de mudar os elementos
+            });
+            });
+            document.addEventListener('DOMContentLoaded', function() {
+            const jogarButton2 = document.querySelector('.botaoproximonivel3');
+            const elementosASeremSubstituidos2 = document.querySelector('#elementos-substitutos3');
+            const elementosSubstitutos2 = document.getElementById("elementos-substitutos4");
+            console.log(elementosSubstitutos2);
+            jogarButton2.addEventListener('click', function() {
+                elementosASeremSubstituidos2.classList.add('fade-out');
+                setTimeout(function() {
+                    elementosASeremSubstituidos2.style.display = 'none';
+                    elementosSubstitutos2.style.display = 'block';
+                }, 500); // aguarda 500ms para realizar a transição antes de mudar os elementos
+            });
+            });
+            document.addEventListener('DOMContentLoaded', function() {
+            const jogarButton2 = document.querySelector('.botaoproximonivel4');
+            const elementosASeremSubstituidos2 = document.querySelector('#elementos-substitutos4');
+            const elementosSubstitutos2 = document.getElementById("elementos-substitutos5");
+            console.log(elementosSubstitutos2);
+            jogarButton2.addEventListener('click', function() {
+                elementosASeremSubstituidos2.classList.add('fade-out');
+                setTimeout(function() {
+                    elementosASeremSubstituidos2.style.display = 'none';
+                    elementosSubstitutos2.style.display = 'block';
+                }, 500); // aguarda 500ms para realizar a transição antes de mudar os elementos
+            });
+            });
+            document.addEventListener('DOMContentLoaded', function() {
+            const jogarButton2 = document.querySelector('.botaoproximonivel5');
+            const elementosASeremSubstituidos2 = document.querySelector('#elementos-substitutos5');
+            const elementosSubstitutos2 = document.getElementById("elementos-substitutos6");
+            console.log(elementosSubstitutos2);
+            jogarButton2.addEventListener('click', function() {
+                elementosASeremSubstituidos2.classList.add('fade-out');
+                setTimeout(function() {
+                    elementosASeremSubstituidos2.style.display = 'none';
+                    elementosSubstitutos2.style.display = 'block';
+                }, 500); // aguarda 500ms para realizar a transição antes de mudar os elementos
+            });
+            });
+            document.addEventListener('DOMContentLoaded', function() {
+            const jogarButton2 = document.querySelector('.botaoproximonivel6');
+            const elementosASeremSubstituidos2 = document.querySelector('#elementos-substitutos6');
+            const elementosSubstitutos2 = document.getElementById("elementos-substitutos7");
+            console.log(elementosSubstitutos2);
+            jogarButton2.addEventListener('click', function() {
+                elementosASeremSubstituidos2.classList.add('fade-out');
+                setTimeout(function() {
+                    elementosASeremSubstituidos2.style.display = 'none';
+                    elementosSubstitutos2.style.display = 'block';
+                }, 500); // aguarda 500ms para realizar a transição antes de mudar os elementos
+            });
+            });
+            document.addEventListener('DOMContentLoaded', function() {
+            const jogarButton2 = document.querySelector('.botaoproximonivel7');
+            const elementosASeremSubstituidos2 = document.querySelector('#elementos-substitutos7');
+            const elementosSubstitutos2 = document.getElementById("elementos-substitutos8");
+            console.log(elementosSubstitutos2);
+            jogarButton2.addEventListener('click', function() {
+                elementosASeremSubstituidos2.classList.add('fade-out');
+                setTimeout(function() {
+                    elementosASeremSubstituidos2.style.display = 'none';
+                    elementosSubstitutos2.style.display = 'block';
+                }, 500); // aguarda 500ms para realizar a transição antes de mudar os elementos
+            });
+            });
+            document.addEventListener('DOMContentLoaded', function() {
+            const jogarButton2 = document.querySelector('.botaoproximonivel8');
+            const elementosASeremSubstituidos2 = document.querySelector('#elementos-substitutos8');
+            const elementosSubstitutos2 = document.getElementById("elementos-substitutos9");
+            console.log(elementosSubstitutos2);
+            jogarButton2.addEventListener('click', function() {
+                elementosASeremSubstituidos2.classList.add('fade-out');
+                setTimeout(function() {
+                    elementosASeremSubstituidos2.style.display = 'none';
+                    elementosSubstitutos2.style.display = 'block';
+                }, 500); // aguarda 500ms para realizar a transição antes de mudar os elementos
+            });
+            });
+            document.addEventListener('DOMContentLoaded', function() {
+            const jogarButton2 = document.querySelector('.botaoproximonivel9');
+            const elementosASeremSubstituidos2 = document.querySelector('#elementos-substitutos9');
+            const elementosSubstitutos2 = document.getElementById("elementos-substitutos10");
+            console.log(elementosSubstitutos2);
+            jogarButton2.addEventListener('click', function() {
+                elementosASeremSubstituidos2.classList.add('fade-out');
+                setTimeout(function() {
+                    elementosASeremSubstituidos2.style.display = 'none';
+                    elementosSubstitutos2.style.display = 'block';
+                }, 500); // aguarda 500ms para realizar a transição antes de mudar os elementos
+            });
+            });
+            document.addEventListener('DOMContentLoaded', function() {
+            const jogarButton2 = document.querySelector('.botaoproximonivel10');
+            const elementosASeremSubstituidos2 = document.querySelector('#elementos-substitutos10');
+            const elementosSubstitutos2 = document.getElementById("fim-de-jogo");
+            console.log(elementosSubstitutos2);
+            jogarButton2.addEventListener('click', function() {
+                elementosASeremSubstituidos2.classList.add('fade-out');
+                setTimeout(function() {
+                    elementosASeremSubstituidos2.style.display = 'none';
+                    elementosSubstitutos2.style.display = 'block';
+                }, 500); // aguarda 500ms para realizar a transição antes de mudar os elementos
+            });
+            });
+            document.addEventListener('DOMContentLoaded', function() {
+            const jogarButton2 = document.querySelector('.botaoproximonivel11');
+            const elementosASeremSubstituidos2 = document.querySelector('#fim-de-jogo');
+            const elementosSubstitutos2 = document.getElementById("elementos-a-serem-substituidos");
+            console.log(elementosSubstitutos2);
+            jogarButton2.addEventListener('click', function() {
+                elementosASeremSubstituidos2.classList.add('fade-out');
+                setTimeout(function() {
+                    elementosSubstitutos2.classList.remove('fade-out');
+                    elementosASeremSubstituidos2.style.display = 'none';
+                    elementosSubstitutos2.style.display = 'block';
+                }, 500); // aguarda 500ms para realizar a transição antes de mudar os elementos
+            });
             });
             </script>
     </body>
